@@ -1,21 +1,41 @@
 # Beispiel für ein benutzerdefiniertes Grußformelfeld mit SMARTY
 
-Hier sind zunächst einige Hinweise zum besseren Verständnis des vorliegenden Beispiels. Eine ausführliche Dokumentation und Referenz der SMARTY-Templating-Sprache finden Sie hier.
+Hier sind zunächst einige Hinweise zum besseren Verständnis des vorliegenden
+Beispiels. Eine ausführliche Dokumentation und Referenz der
+SMARTY-Templating-Sprache finden Sie [hier](https://www.smarty.net).
 
-- SMARTY-Tags werden in der Regel von geschwungenen Klammern umschlossen. Standardmäßig sind dies { und }.
-- Kommentare stehen zwischen "Sternchen". Sie werden in der Ausgabe nicht angezeigt.
-- In SMARTY beginnen Variablen normalerweise mit einem Dollarzeichen $.
-- SMARTY kann {if}-Anweisungen verwenden. Diese müssen mit einem passenden {/if} abgeschlossen werden. Es gibt die Möglichkeit, {else} hinzuzufügen, wenn die Bedingung nicht erfüllt ist, oder {elseif}, um eine weitere Testbedingung anzugeben.
-- Der logische Operator ! gibt ein logisches Nicht an und bedeutet im Zusammenhang mit einer Variablen, dass die Bedingung erfüllt ist, wenn der Inhalt der Variablen leer ist (oder ein entsprechender Wert eines anderen Typs, z. B. 0 oder falsch).
-- Der logische Operator && besagt, dass beide Ausdrücke wahr sein müssen, um die Bedingung zu erfüllen.
-- Das Zeichen | bedeutet, dass SMARTY mehrere Funktionen kombiniert und sie nacheinander ausführt.
+- SMARTY-Tags werden in der Regel von geschwungenen Klammern umschlossen.
+  Standardmäßig sind dies `{` und `}`.
+- Kommentare stehen zwischen "Sternchen". Sie werden in der Ausgabe nicht
+  angezeigt.
+- In SMARTY beginnen Variablen normalerweise mit einem Dollarzeichen `$`.
+- SMARTY kann `{if}`-Anweisungen verwenden. Diese müssen mit einem
+  passenden `{/if}` abgeschlossen werden. Es gibt die Möglichkeit, {else}
+  hinzuzufügen, wenn die Bedingung nicht erfüllt ist, oder {elseif}, um eine
+  weitere Testbedingung anzugeben.
+- Der logische Operator `!` gibt ein logisches Nicht an und bedeutet im
+  Zusammenhang mit einer Variablen, dass die Bedingung erfüllt ist, wenn der
+  Inhalt der Variablen leer ist (oder ein entsprechender Wert eines anderen
+  Typs, z. B. `0` oder falsch).
+- Der logische Operator `&&` besagt, dass beide Ausdrücke wahr sein müssen, um
+  die Bedingung zu erfüllen.
+- Das Zeichen `|` bedeutet, dass SMARTY mehrere Funktionen kombiniert und sie
+  nacheinander ausführt.
 
-Im vorliegenden Beispiel prüft SMARTY zunächst den Kontakttyp (Haushalt, Organisation oder Einzelperson) des jeweiligen Kontaktes. Dann wird automatisch der Inhalt des entsprechenden Grußformelfeldes entsprechend der Prüfbedingungen generiert.
+Im vorliegenden Beispiel prüft SMARTY zunächst den Kontakttyp (Haushalt,
+Organisation oder Einzelperson) des jeweiligen Kontaktes. Dann wird automatisch
+der Inhalt des entsprechenden Grußformelfeldes entsprechend der Prüfbedingungen
+generiert.
 
-Besonders im Fall eines Einzelkontakts prüft Smarty mehrere Bedingungen ab. Anhand des Feldes Gender ID und des Feldes Prefix ID ermittelt SMARTY das Geschlecht des jeweiligen Kontakts und passt die Grußformel entsprechend an. Dann wird jeweils eine if-Bedingung verwendet, um den akademischen Titel zu prüfen und entsprechend an den Anfang der Grußformel zu platzieren.
+Besonders im Fall eines Einzelkontakts prüft Smarty mehrere Bedingungen ab.
+Anhand des Feldes `gender_id` und des Feldes `prefix_id` ermittelt SMARTY das
+Geschlecht des jeweiligen Kontakts und passt die Grußformel entsprechend an.
+Dann wird jeweils eine if-Bedingung verwendet, um den akademischen Titel zu
+prüfen und entsprechend an den Anfang der Grußformel zu platzieren.
 
-Beachten Sie, dass es sich hier um ein Beispiel für deutsche Kontaktdaten handelt, wo sich die Endungen zwischen männlicher und weiblicher Anrede deutlich sprachlich unterscheiden.
-
+Beachten Sie, dass es sich hier um ein Beispiel für deutsche Kontaktdaten
+handelt, wo sich die Endungen zwischen männlicher und weiblicher Anrede deutlich
+sprachlich unterscheiden.
 
 ```
 {*prefix IDs: 5 --&gt; weiblich, 6 --&gt; maennlich*}
@@ -118,4 +138,8 @@ unbestimmt, NULL*}
 {/if}
 ```
 
-Zum besseren Verständnis dieses Beispiels ist der Aufbau der Grußformel hier in Form einer Grafik dargestellt: ![graphic](/Images/Example_MoreGreetings.png)
+Zum besseren Verständnis dieses Beispiels ist der Aufbau der Grußformel hier in
+Form einer Grafik
+dargestellt:
+
+![More Greetings - Grußformellogik](img/example_logic_tree.png "More Greetings - Grußformellogik")
