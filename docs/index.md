@@ -1,4 +1,4 @@
-# CiviCRM Erweiterung für zusätzliche Grußformeln bzw. Grußformelfelder: More Greetings(XCM)
+# CiviCRM Erweiterung für zusätzliche Grußformeln bzw. Grußformelfelder: More Greetings
 
 ## Features
 
