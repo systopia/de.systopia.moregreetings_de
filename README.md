@@ -1,5 +1,5 @@
 # CiviCRM Extension for additional greetings: More Greetings(XCM)
 
 ## Documentation
-- https://docs.civicrm.org/moregreetings/en/latest
-- https://docs.civicrm.org/moregreetings/de/latest
+- EN: https://docs.civicrm.org/moregreetings/en/latest (automatische Veröffentlichung)
+- DE: https://docs.civicrm.org/moregreetings/de/latest (automatische Veröffentlichung)
